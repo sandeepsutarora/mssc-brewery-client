@@ -13,7 +13,5 @@ import java.util.UUID;
 @Builder
 public class CustomerDTO {
     private UUID id;
-    private String beerName;
-    private String beerStyle;
-    private Long upc;
+    private String customerName;
 }

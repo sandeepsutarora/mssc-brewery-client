@@ -6,6 +6,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import sutar.innovation.msscbreweryclient.web.model.BeerDTO;
+import sutar.innovation.msscbreweryclient.web.model.CustomerDTO;
 
 import java.net.URI;
 import java.util.UUID;
@@ -46,5 +47,29 @@ class BreweryClientTest {
     void testDeleteBeer()
     {
         client.deleteBeer(UUID.randomUUID());
+    }
+
+    @Test
+    void getCustomerById()
+    {
+        CustomerDTO dto = client.getCustomerById(UUID.randomUUID());
+        assertNotNull(dto);
+    }
+    @Test
+    void testSaveNewCustomer()
+    {
+        CustomerDTO dto = CustomerDTO.builder().customerName("Sachin Tendulkar").build();
+        client.saveNewCustomer(dto);
+    }
+    @Test
+    void testUpdateCustomer()
+    {
+        CustomerDTO dto = CustomerDTO.builder().customerName("Sandeep").build();
+        client.updateCustomer(UUID.randomUUID(),dto);
+    }
+    @Test
+    void testDeleteCustomer()
+    {
+        client.deleteCustomer(UUID.randomUUID());
     }
 }
