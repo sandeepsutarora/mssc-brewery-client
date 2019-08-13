@@ -25,6 +25,7 @@ public class BeerDTO {
     @NotBlank
     private String beerStyle;
 
+    //
     @Positive
     private Long upc;
 }
