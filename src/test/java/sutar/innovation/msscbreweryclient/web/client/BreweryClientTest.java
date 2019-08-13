@@ -21,4 +21,11 @@ class BreweryClientTest {
         System.out.println(dto);
         System.out.println("this is working perfect");
     }
+
+    @Test
+    void testUpdateBeer()
+    {
+        BeerDTO beerDTO = BeerDTO.builder().beerName("Bike Piper").build();
+
+    }
 }
