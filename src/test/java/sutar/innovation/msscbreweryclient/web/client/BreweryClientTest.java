@@ -27,7 +27,7 @@ class BreweryClientTest {
 
     @Test
 =======
-    void testSaveNewBeer()
+    void testSaveNewBeer()  
     {
         BeerDTO beerDTO = BeerDTO.builder().beerName("black mango").build();
         URI uri = client.saveNewBeer(beerDTO);
